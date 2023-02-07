@@ -1,0 +1,590 @@
+*{
+    box-sizing: border-box;
+}
+
+.blocpage {
+    max-width: 768px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-loader {
+    position: relative;
+    animation: hideloader 3s forwards;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+
+.loader {
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-top: 16px solid #9356DC;
+    border-bottom: 16px solid #FF79DA;
+    border-radius: 50%;
+    animation: chargeur 3s linear infinite;
+ 
+
+}
+
+    @keyframes chargeur {
+
+        0%{
+            transform: rotate(0deg) 
+        
+        }
+
+        100%{
+            transform: rotate(360deg)
+        } 
+        
+    }
+
+    @keyframes hideloader {
+
+        100%{
+            height: 0;
+            width: 0;
+        }
+        
+    }
+
+body {
+
+    font-family: "shrikhand", serif;
+    font-family: "roboto", sans-serif;
+    width: 100%;
+    margin: 0;
+
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+header {
+
+    display: flex;
+}
+.logo {
+
+width: 100%;
+align-items: center;
+text-align: center;
+margin-top: 8px;
+margin-bottom: 8px;
+
+}
+
+.logo2 {
+
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+    
+    }
+
+
+.imglogo {
+
+    margin-top: 10px;
+    height: 25px;
+    width: 160px;
+    font-family: "shrikand", serif;
+}
+
+.fa-solid.fa-arrow-left {
+    color: black;
+    margin: auto;
+    margin-top: 0px;
+   
+    
+}
+
+.return {
+
+
+    width: 20%;
+    text-align: center;
+    margin-top: 18px;
+}
+
+.search {
+
+    background-color: #dcdcdc;
+    text-align: center;
+    border-top:  solid 2px #bfbfbf ;
+    height: 40px;
+    margin: 0;
+    width: 100%;
+   
+}
+
+.inputsearch {
+
+    border: none;
+    background-color: #dcdcdc;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: "roboto", sans-serif;
+    font-weight: bold;
+}
+
+
+.fas.fa-map-marker-alt {
+
+    margin-left: 60px;
+}
+
+.containerbooking {
+
+    background-color: #efefef;
+    margin-top: 0;
+    text-align: center;
+}
+
+.bookingtitle {
+
+    font-family: "roboto", sans-serif;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 20px 25px 0 25px;
+    
+
+}
+
+.bookingtext {
+
+    font-family: "roboto", sans-serif;
+    font-size: 1.1rem;
+    color: #272626b4;
+    padding-bottom: 20px;
+}
+
+.explorer {
+
+    font-family: "roboto", sans-serif;
+    color: white;
+    font-size: 1rem;
+    border: transparent;
+    border-radius: 30px;
+    height: 45px;
+    width: 60%;
+    margin-bottom: 50px;
+    background: linear-gradient(to bottom right, #ff79da, #9356dc);
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 4px 4px 9px #a9a9a9;
+    text-align: center;
+    transition: all 500ms;
+}
+
+.explorer:hover {
+    background: linear-gradient(to bottom right, #ff8fdf, #9a6ad6);
+    box-shadow: 4px 4px 9px #646464;
+}
+
+
+
+.fonctionnementtitle {
+
+    font-family: "roboto", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+
+.cardfonctionnement {
+    display: flex;
+    border: solid 1px #efefef;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 4px 2px 9px #a9a9a9;
+    height: 60px;
+    width: 85%;
+    text-align: center;
+    background-color: #efefef;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.cardfonctionnement:hover {
+
+    background-color: #ebe1eb;
+}
+
+.cardfonctionnement:hover > .cardicons {
+
+    color: #9356dc;
+}
+
+.cardnumber {
+    border: solid 1px #9356dc ;
+    border-radius: 10px;
+    color: white;
+    background-color: #9356dc;
+    height: 1.1rem;
+    width: 1.3rem;
+    text-align: center;
+    margin-top: 18px;
+    padding-top: 1px;
+    position: relative;
+    right: 10px;
+}
+
+.cardicons {
+
+    margin-top: 20px;
+    color: #696969;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+.cardfonctext {
+
+  font-family: "roboto, sans serif";
+  margin: auto;
+  margin-right: 80px;
+  font-size: 17px;
+}
+
+.containerrestaurants {
+
+    background-color: #efefef;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+.titlerestaurant {
+
+    font-family:  "roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.containercard {
+
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.imgnouveau {
+
+    position: relative;
+}
+
+.nouveau {
+
+    color: green;
+    font-family: "roboto", sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #99E2D0;
+    background-color: #99E2D0;
+    width: 85px;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+  
+    
+
+}
+
+.imgresto {
+
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 0px solid #a9a9a9;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.cardresto {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 20px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 4px 2px 9px #a9a9a9;
+    margin-bottom: 20px;
+}
+
+.cardtext {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textin {
+
+    font-family: "roboto", sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.textin h4 {
+
+    
+    color: black;
+    font-weight: 800;
+    margin: 0;
+
+}
+
+.textin p {
+
+    color: black;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cardicon {
+
+    align-items: center;
+}
+
+.btnheart {
+
+    border: none;
+    margin-right: 10px;
+}
+
+.fa-regular.fa-heart {
+
+    margin: auto;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    color: black;
+    transition: all 1s;
+        
+}
+
+.fa-regular.fa-heart:active {
+
+    color: #9356dc;
+    background-color: #9356dc;
+}
+
+footer {
+
+    background-color: #2e2e2e;
+    padding: 20px;
+    
+}
+
+footer h2 {
+
+    margin: 0;
+    color: white;
+    font-family: "shrikhand", serif;
+    font-size: 1rem;
+}
+
+footer p {
+
+    margin: 0;
+    color: white;
+    font-family: "roboto", sans-serif;
+    font-size: 0.8rem;
+}
+
+
+.contfooter {
+
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.textfoot {
+
+   
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    color: white;
+    
+}
+
+.fa-solid.fa-utensils {
+
+    font-size: 0.6rem;
+    margin-right: 10px;
+    margin-top: 3px;
+ 
+}
+
+.fa-solid.fa-handshake-angle {
+
+    font-size: 0.5rem;
+    margin-right: 8px;
+    margin-top: 3px;
+  
+}
+
+.imgpage2 {
+
+    height: 220px;
+}
+
+.containermenu {
+
+    border: 1px solid #efefef;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #efefef;
+    margin-top: -30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+.menu {
+
+    padding-bottom: 20px;
+}
+
+.restotitle {
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+    
+}
+
+.nameresto {
+
+    font-family: "Shrikhand", serif;
+    font-size: 1.2rem;
+    
+}
+
+
+.menuplat {
+    padding-bottom: 10px;
+}
+
+.menutitle {
+
+    font-family: "roboto", sans-serif;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-bottom: 2px solid #99E2D0;
+    width: 10%;
+    padding-bottom: 3px;
+    
+}
+
+.plattitle {
+
+    font-family: "roboto", sans-serif;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-bottom: 2px solid #99E2D0;
+    width: 10%;
+    padding-bottom: 3px;
+    margin-left: 40px;
+
+}
+
+.cardlinkmenu {
+
+    width: 100%;
+}
+
+.cardmenu {
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 9px #a9a9a9;
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-family: "roboto", sans-serif;
+    text-decoration: none;
+    text-align: left;
+    height: 50px;
+    
+    
+}
+
+.titreplat {
+
+    margin-left: 10px;
+    margin-top: 10px;
+    color: black;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    
+}
+
+.platdetailprix {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: black;
+    margin-left: 10px;
+    margin-top: 0;
+   
+}
+
+.platdetail {
+
+    margin: 2px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.platprix {
+
+font-weight: 800;
+margin-top: 2px;
+margin-right: 20px;
+}

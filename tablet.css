@@ -1,0 +1,99 @@
+.blocpage {
+
+    max-width: 992px;
+}
+
+.contcardfonct {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.cardfonctionnement {
+
+    width: 30%;
+}
+
+.cardicons {
+
+    margin-left: 5px;
+    
+}
+
+.cardfonctext {
+
+    margin: auto;
+}
+
+.containercard {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.cardlink {
+
+    width: 100%;
+}
+
+.cardresto {
+
+    height: 250px;
+}
+
+.cardtext {
+
+    text-align: center;
+}
+
+.textin {
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.textin h4 {
+
+    margin: auto;
+}
+
+.fa-regular.fa-heart {
+
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.explorer {
+
+    width: 20%;
+}
+
+.menu {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuplat {
+
+    width: 31%;
+    margin: auto;
+    margin-top: 0;
+    
+}
+
+.cardmenu {
+
+    height: 70px;
+    width: 100%;
+
+}
