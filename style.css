@@ -9,56 +9,7 @@
     flex-direction: column;
 }
 
-.container-loader {
-    position: relative;
-    animation: hideloader 3s forwards;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
 
-
-
-.loader {
-
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: 16px solid #bdc3c7;
-    width: 120px;
-    height: 120px;
-    border-top: 16px solid #9356DC;
-    border-bottom: 16px solid #FF79DA;
-    border-radius: 50%;
-    animation: chargeur 3s linear infinite;
- 
-
-}
-
-    @keyframes chargeur {
-
-        0%{
-            transform: rotate(0deg) 
-        
-        }
-
-        100%{
-            transform: rotate(360deg)
-        } 
-        
-    }
-
-    @keyframes hideloader {
-
-        100%{
-            height: 0;
-            width: 0;
-        }
-        
-    }
 
 body {
 
@@ -74,14 +25,17 @@ img {
     width: 100%;
 }
 
+/*  header  */
+
 header {
 
     display: flex;
 }
+
 .logo {
 
 width: 100%;
-align-items: center;
+justify-content: center;
 text-align: center;
 margin-top: 8px;
 margin-bottom: 8px;
@@ -123,6 +77,8 @@ margin-bottom: 8px;
     text-align: center;
     margin-top: 18px;
 }
+
+/* recherche */
 
 .search {
 
@@ -195,12 +151,14 @@ margin-bottom: 8px;
     transition: all 500ms;
 }
 
+/* animation bouton couleur */
+
 .explorer:hover {
     background: linear-gradient(to bottom right, #ff8fdf, #9a6ad6);
     box-shadow: 4px 4px 9px #646464;
 }
 
-
+/* fonctionnement */
 
 .fonctionnementtitle {
 
@@ -269,6 +227,8 @@ margin-bottom: 8px;
   margin-right: 80px;
   font-size: 17px;
 }
+
+/* container restaurants */
 
 .containerrestaurants {
 
@@ -395,15 +355,45 @@ a {
     margin-right: 20px;
     font-size: 1.2rem;
     color: black;
-    transition: all 1s;
+  
         
 }
+
+/* animation coeur */
+
+.fa-regular.fa-heart:hover {
+
+    animation: heartcolor 1s;
+    color: #9a6ad6;
+    background: -webkit-linear-gradient(#ff8fdf, #9a6ad6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
+
+
+}
+
+
+@keyframes heartcolor {
+
+    from {opacity: 0}
+
+    to {opacity: 1;}
+    
+}
+
+
+
+
 
 .fa-regular.fa-heart:active {
 
     color: #9356dc;
     background-color: #9356dc;
 }
+
+/* footer */
 
 footer {
 
@@ -461,6 +451,8 @@ footer p {
   
 }
 
+/* pages restaurants */
+
 .imgpage2 {
 
     height: 220px;
@@ -501,10 +493,50 @@ footer p {
     
 }
 
+/* animation apparition décalée */
 
 .menuplat {
     padding-bottom: 10px;
+    animation: menuappaer 1s;
+    animation-fill-mode: both;
+    
 }
+
+.menuplat:nth-child(3n + 1) {
+    animation-delay: 0.5s;
+}
+
+.menuplat:nth-child(3n + 2) {
+    animation-delay: 0.9s;
+}
+    
+.menuplat:nth-child(3n + 3) {
+    animation-delay: 1.3s;
+}
+
+@keyframes menuappaer {
+
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cardcontent {
+
+    width: 100%;
+}
+
+.cardmenu:hover .cardcontent {
+
+    width: 85%;
+    transition: all 0.6s, ease-in-out, width 1s;
+   
+} 
+
 
 .menutitle {
 
@@ -534,6 +566,7 @@ footer p {
 .cardlinkmenu {
 
     width: 100%;
+    display: flex;
 }
 
 .cardmenu {
@@ -541,16 +574,20 @@ footer p {
     border-radius: 10px;
     box-shadow: 4px 4px 9px #a9a9a9;
     background-color: white;
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-bottom: 10px;
     font-family: "roboto", sans-serif;
     text-decoration: none;
     text-align: left;
     height: 50px;
+    display: flex;
+    overflow: hidden;
+    
     
     
 }
+
 
 .titreplat {
 
@@ -576,7 +613,8 @@ footer p {
 
 .platdetail {
 
-    margin: 2px;
+    margin-left: 1px;
+    margin-top: 2px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -584,7 +622,127 @@ footer p {
 
 .platprix {
 
-font-weight: 800;
-margin-top: 2px;
-margin-right: 20px;
+    font-weight: 800;
+    margin-top: 2px;
+    margin-right: 20px;
 }
+
+.platcheck {
+
+    background-color: #99E2D0;
+    color: white;
+    width: 0;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    border: 1px solid #99E2D0;
+    transition: width 1s, transform 1s;
+    margin-right: -20px;
+
+  
+}
+
+/* animation plat check */
+
+.cardmenu:hover .platcheck {
+    width: 15%;
+    
+}
+
+.cardmenu:hover .fa-solid.fa-circle-check {
+    animation: rotatecheck 0.7s;
+
+
+}
+
+@keyframes rotatecheck {
+
+    0% {
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+    
+}
+
+.fa-solid.fa-circle-check {
+
+    margin: auto;
+    font-size: 20px;
+    
+}
+
+/* animation loader */
+
+.container-loader {
+    position: absolute;
+    animation: hideloader 2.5s forwards;
+    animation-delay: 3s;
+    overflow: hidden;
+    height: 140vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: white;
+    background-size: cover;
+
+}
+
+
+
+.loader {
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-top: 16px solid #9356DC;
+    border-bottom: 16px solid #FF79DA;
+    border-radius: 50%;
+    animation: chargeur 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    right: 49%;
+  
+
+}
+
+    @keyframes chargeur {
+
+        0%{
+            transform: rotate(0deg) 
+        
+        }
+
+        100%{
+            transform: rotate(360deg)
+        } 
+        
+    }
+
+    @keyframes hideloader {
+
+        0% {
+            transform: scale(1);
+            opacity: 0;
+        }
+        
+        50% {
+            height: 50%;
+        }
+
+        100%{
+            height: 0;
+            transform: scale(0);
+            overflow: hidden;
+            border-radius: 50%;
+            
+            
+        }
+        
+    }
