@@ -682,7 +682,7 @@ footer p {
     animation-delay: 3s;
     overflow: hidden;
     height: 140vh;
-    width: 80vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -707,7 +707,7 @@ footer p {
     animation: chargeur 2s linear infinite;
     position: absolute;
     top: 50%;
-    right: 49%;
+    right: 37%;
   
 
 }
