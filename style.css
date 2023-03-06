@@ -684,7 +684,7 @@ footer p {
     animation: hideloader 2.5s forwards;
     animation-delay: 3s;
     overflow: hidden;
-    height: 230vh;
+    height: 232vh;
     width: 100vw;
     display: flex;
     justify-content: center;
